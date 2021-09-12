@@ -1,0 +1,1270 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pan health",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "Registration",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{name}",
+                "My name is {name}"
+              ]
+            },
+            {
+              "name": "phonenumber",
+              "type": "AMAZON.PhoneNumber",
+              "samples": [
+                "{phonenumber}",
+                "My phone number is {phonenumber}"
+              ]
+            },
+            {
+              "name": "gender",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "My gender is {gender}",
+                "{gender}"
+              ]
+            }
+          ],
+          "samples": [
+            "Confirm",
+            "create my account ",
+            "create my pan health  account",
+            "I want to create a pan health account ",
+            "Alexa create my pan health account"
+          ]
+        },
+        {
+          "name": "Login",
+          "slots": [
+            {
+              "name": "loginID",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "my login ID is {loginID}",
+                "{loginID}"
+              ]
+            },
+            {
+              "name": "password",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{number} {password}",
+                "{password}",
+                "{number}",
+                "my password is {password} {number}",
+                "{password} {number}"
+              ]
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "My loginid and password is {loginID} {password}  please login to my pan health account",
+            "login my pan health acount",
+            "login me to pan health",
+            "login to pan health"
+          ]
+        },
+        {
+          "name": "AddingMedicines",
+          "slots": [
+            {
+              "name": "memberID",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memberID}",
+                "My member id is {memberID}"
+              ]
+            },
+            {
+              "name": "physician_name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{physician_name}",
+                "physician name is {physician_name}"
+              ]
+            },
+            {
+              "name": "med_name",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{med_name}",
+                "Medicine name is {med_name} "
+              ]
+            },
+            {
+              "name": "med_quantity",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{med_quantity}",
+                "quantity is {med_quantity}"
+              ]
+            },
+            {
+              "name": "frequency",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{frequency}  times",
+                "{frequency}",
+                "I want to take medicine {frequency} times a day"
+              ]
+            },
+            {
+              "name": "comments",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "Medicine is used to cure {comments}",
+                "{comments}"
+              ]
+            },
+            {
+              "name": "morningslot",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{morningslot}"
+              ]
+            },
+            {
+              "name": "afternoonslot",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{afternoonslot}"
+              ]
+            },
+            {
+              "name": "eveningslot",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{eveningslot}"
+              ]
+            },
+            {
+              "name": "nightslot",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{nightslot}"
+              ]
+            }
+          ],
+          "samples": [
+            "add medicine to my list",
+            "add medicine in my pan health account",
+            "add my medicine"
+          ]
+        },
+        {
+          "name": "virtualpillbox",
+          "slots": [
+            {
+              "name": "virtual_med",
+              "type": "AMAZON.FirstName"
+            },
+            {
+              "name": "memID",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "My member is {memID}",
+                "{memID}"
+              ]
+            }
+          ],
+          "samples": [
+            "tell my {virtual_med} medicines",
+            "Can you please tell my {virtual_med} medicines",
+            "Tell me my {virtual_med} medicines",
+            "Alexa tell me my {virtual_med} medicines"
+          ]
+        },
+        {
+          "name": "MedInfo",
+          "slots": [
+            {
+              "name": "memberID",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memberID}",
+                "my member id is {memberID}"
+              ]
+            }
+          ],
+          "samples": [
+            "Alexa give my medicines description ",
+            " Alexa give information of my medicines",
+            "Alexa I wonder if you tell me about my medicines"
+          ]
+        },
+        {
+          "name": "SearchMed",
+          "slots": [
+            {
+              "name": "search_med",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{search_med}",
+                "medicine name is {search_med}"
+              ]
+            },
+            {
+              "name": "search_med_id",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{search_med_id}"
+              ]
+            }
+          ],
+          "samples": [
+            "Search my medicine",
+            "Alexa sort through my medicine list ",
+            "Alexa search for my medicine"
+          ]
+        },
+        {
+          "name": "DeleteMed",
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memid}",
+                "my member id is {memid}"
+              ]
+            },
+            {
+              "name": "delete_med",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "Medicine name is {delete_med}",
+                "{delete_med}"
+              ]
+            }
+          ],
+          "samples": [
+            "Hey Alexa I want to remove my medicine",
+            "Hey Alexa I want to delete a medicine.",
+            "Alexa delete my medicine"
+          ]
+        },
+        {
+          "name": "refillmed",
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memid}",
+                "my member id is {memid}"
+              ]
+            },
+            {
+              "name": "medname",
+              "type": "AMAZON.StreetName",
+              "samples": [
+                "{medname}",
+                "i want to refill {medname}"
+              ]
+            },
+            {
+              "name": "totalqty",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{totalqty}",
+                "i want to add {totalqty}"
+              ]
+            }
+          ],
+          "samples": [
+            "i want to refill",
+            "i want to refill my medicine"
+          ]
+        },
+        {
+          "name": "setReminder",
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memid} is my member id",
+                "my member id is {memid}",
+                "{memid}"
+              ]
+            },
+            {
+              "name": "phonenum",
+              "type": "AMAZON.PhoneNumber",
+              "samples": [
+                "{phonenum} is my phone number",
+                "my number is {phonenum}",
+                "{phonenum}"
+              ]
+            },
+            {
+              "name": "calldate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{calldate} is date",
+                "date is {calldate}",
+                "{calldate}",
+                "set the date {calldate}"
+              ]
+            },
+            {
+              "name": "calltime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{calltime} is the time",
+                "{calltime}",
+                "the time is {calltime}"
+              ]
+            }
+          ],
+          "samples": [
+            "can you please set a reminder",
+            "please set a reminder",
+            "set reminder for me",
+            "i want to set a reminder"
+          ]
+        },
+        {
+          "name": "takeMedication",
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{memid}",
+                "my member id is {memid}"
+              ]
+            },
+            {
+              "name": "mednametaking",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{mednametaking}",
+                "the medicine is {mednametaking}"
+              ]
+            },
+            {
+              "name": "medqty",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{medqty}",
+                "the quantity is {medqty}"
+              ]
+            }
+          ],
+          "samples": [
+            "help me to take my medicine",
+            "i want to take medicine"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "Registration",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1457699943243"
+          },
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.474007328758.300470376135",
+                "elicitation": "Elicit.Slot.474007328758.300470376135"
+              }
+            },
+            {
+              "name": "phonenumber",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.474007328758.1317031565661",
+                "elicitation": "Elicit.Slot.474007328758.1317031565661"
+              }
+            },
+            {
+              "name": "gender",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.474007328758.665755554372",
+                "elicitation": "Elicit.Slot.474007328758.665755554372"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "loginID",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.474655746688.1090249038364",
+                "elicitation": "Elicit.Slot.474655746688.1090249038364"
+              }
+            },
+            {
+              "name": "password",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.857419258475.509598708234",
+                "elicitation": "Elicit.Slot.474655746688.162086249880"
+              }
+            },
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "AddingMedicines",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memberID",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.350711172335"
+              }
+            },
+            {
+              "name": "physician_name",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.557944021502"
+              }
+            },
+            {
+              "name": "med_name",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.789819433648"
+              }
+            },
+            {
+              "name": "med_quantity",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.1506460938343"
+              }
+            },
+            {
+              "name": "frequency",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.402828689805"
+              }
+            },
+            {
+              "name": "comments",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.1297327803006"
+              }
+            },
+            {
+              "name": "morningslot",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.763241588746"
+              }
+            },
+            {
+              "name": "afternoonslot",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.381897365509"
+              }
+            },
+            {
+              "name": "eveningslot",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.1337267323442"
+              }
+            },
+            {
+              "name": "nightslot",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.341864616207.1212035385535"
+              }
+            }
+          ]
+        },
+        {
+          "name": "virtualpillbox",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "virtual_med",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "memID",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1007873524040.1193935685669",
+                "elicitation": "Elicit.Slot.1530348693344.1357076977841"
+              }
+            }
+          ]
+        },
+        {
+          "name": "MedInfo",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memberID",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.798711624765.1123550565611",
+                "elicitation": "Elicit.Slot.525688730813.833329094585"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SearchMed",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "search_med",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.379696274874.445331404620"
+              }
+            },
+            {
+              "name": "search_med_id",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.775381493804.883414905236",
+                "elicitation": "Elicit.Slot.775381493804.883414905236"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DeleteMed",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1400780557564.1494424334375",
+                "elicitation": "Elicit.Slot.1400780557564.1494424334375"
+              }
+            },
+            {
+              "name": "delete_med",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1400780557564.52898115486"
+              }
+            }
+          ]
+        },
+        {
+          "name": "refillmed",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.973094186232.1349991173609"
+              }
+            },
+            {
+              "name": "medname",
+              "type": "AMAZON.StreetName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.973094186232.1492613087977"
+              }
+            },
+            {
+              "name": "totalqty",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.973094186232.892298459817"
+              }
+            }
+          ]
+        },
+        {
+          "name": "setReminder",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1454887971645.1223979960885"
+              }
+            },
+            {
+              "name": "phonenum",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.851247480317.372090610312"
+              }
+            },
+            {
+              "name": "calldate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.851247480317.806937429958"
+              }
+            },
+            {
+              "name": "calltime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.851247480317.472220683337"
+              }
+            }
+          ]
+        },
+        {
+          "name": "takeMedication",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "memid",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.980224248889.883543558878"
+              }
+            },
+            {
+              "name": "mednametaking",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.980224248889.1254397924212"
+              }
+            },
+            {
+              "name": "medqty",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.980224248889.1005980674368"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.474007328758.300470376135",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "To get started, please tell me your given name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.474007328758.300470376135",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you i\u0027m confirming once more Is your name {name} "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.474007328758.1317031565661",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Great. Now can you please tell your phone number "
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.474007328758.1317031565661",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eThank you! I’m confirming once more is your phone number is \u003csay-as interpret-as\u003d\u0027telephone\u0027\u003e {phonenumber} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.474007328758.665755554372",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Here is another question to get you registered. Please tell me your gender"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.474007328758.665755554372",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Okay, i\u0027m confirming again with you. Is your gender is {gender}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.474007328758",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "confirm"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1457699943243",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You are all set. Say confirm now to register your PanHealth account "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.474655746688.1090249038364",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yeah sure, I can do that for you. Can you tell me your member  id without the letter A"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.474655746688.1090249038364",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay. I’m confirming before logging you in. Is your login id \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e {loginID} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.474655746688.162086249880",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Now can you please tell me your password"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.350711172335",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yes sure Tell me your member ID without the letter A "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.557944021502",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Before adding, can you please tell me your physician\u0027s name so that I can save it"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.789819433648",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The name has been saved. Now tell me the medicine name which you want to add."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.1506460938343",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me the quantity of your medicine which you have with you currently."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.402828689805",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Now let me know how many times you want to take this medicine "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.763241588746",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me whether you want to take this medicne in morning say yes otherwise say no"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.1337267323442",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me whether you want to take this medicne in evening say yes otherwise say no"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.381897365509",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me whether you want to take this medicne in afternoon say yes otherwise say no"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.1212035385535",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me whether you want to take this medicne in night say yes otherwise say no"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.341864616207.1297327803006",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Describe what the use of this medicine is for you"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1530348693344.1357076977841",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sure please tell me your Member ID without letter A for {virtual_med} medicines"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1007873524040.1193935685669",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eIs your member id is \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e {memID} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.254713321042.1408305554049",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell your phone number "
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.254713321042.1408305554049",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Isyour phone number is {num}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.525688730813.833329094585",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Let me see what I can do for you. Can you please tell me your member ID without the letter A"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.379696274874.445331404620",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yes, I can surely help you. Can you tell me the name of medicine you want to search"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1400780557564.1494424334375",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sure, I can do that for you. Please tell me your member ID without the letter A to proceed"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1400780557564.1494424334375",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay I am confirming Is your member id is \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e{memid} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1400780557564.52898115486",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Great Now please tell the name of medicine which you want to delete or remove from your existing list. "
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.798711624765.1123550565611",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay I am confirming Is your member ID is \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e{memberID} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.785330320477.1551423938881",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me your login_id"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.785330320477.1551423938881",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "OK I\u0027m Confirming , your login_id is {login_id} ,Right?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.785330320477.644906892484",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "OK I\u0027m Confirming , you want to delete  {medname} medicine ,Right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.785330320477.644906892484",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me the medicine you want to delete"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1212971379153.461324524098",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "OK I\u0027m Confirming , your login_id is {loginid} ,Right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1212971379153.461324524098",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me your login_id"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1212971379153.49784408088",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "OK I\u0027m Confirming , you want to search for {medname} medicine ,Right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1212971379153.49784408088",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me the medicine name you want to search"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.857419258475.509598708234",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay i\u0027m confirming Is your password is \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e {password} {number} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.775381493804.883414905236",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Now please tell me your member ID without letter A to proceed further"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.775381493804.883414905236",
+        "variations": [
+          {
+            "type": "SSML",
+            "value": "\u003cspeak\u003eOkay. I’m confirming before searching. Is your login id \u003csay-as interpret-as\u003d\u0027digits\u0027\u003e {search_med_id} \u003c/say-as\u003e\u003c/speak\u003e"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.64693468491.1389721973719",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me your login ID"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.64693468491.1389721973719",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Is it {demoid}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.973094186232.1349991173609",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yeah sure. Can you tell me your Member ID?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.973094186232.1492613087977",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you please tell me the name of the medicine you want to refill?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.973094186232.892298459817",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you tell me the quantity that you want to add to your medicine?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.851247480317.806937429958",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you tell me in which date, you want to be reminded?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.851247480317.372090610312",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you please tell me the phone number?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.851247480317.472220683337",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me the time, you want to be reminded"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1454887971645.1223979960885",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yeah Sure. Can you please tell me your member ID without the letter A."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.980224248889.883543558878",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Yeah sure, tell me member id"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.980224248889.1254397924212",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me the name of the medicine you want to take"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.980224248889.1005980674368",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the quantity?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
